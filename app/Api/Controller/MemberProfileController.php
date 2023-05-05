@@ -21,6 +21,6 @@ class MemberProfileController extends Controller implements MemberLoginCheck
             $data = $input->all();
         }
         MemberUtil::update(MemberUser::id(), ArrayUtil::keepKeys($data, ['gender', 'realname', 'signature']));
-        return Response::jsonSuccess('保存成功');
+        return Response::jsonSuccess('Successfully saved');
     }
 }
